@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Profile | [사람 확인 필요]</title>
+  <meta name="description" content="A responsive professional portfolio with a Games section reserved for a snake game.">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./script.js"></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand-mark"></span>
+        <span class="brand-text">Profile</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#games">Games</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero panel" id="about">
+        <p class="eyebrow">Professional Portfolio</p>
+        <h1>Responsive profile foundation with a reserved game zone.</h1>
+        <p class="lead">
+          This first loop keeps the existing content safe, prepares a clean responsive layout,
+          and leaves space for CV-verified details marked as [사람 확인 필요].
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#experience">View profile</a>
+          <a class="button secondary" href="#games">Open Games</a>
+        </div>
+      </section>
+
+      <section class="grid two-up" id="experience">
+        <article class="panel">
+          <p class="section-label">Profile</p>
+          <h2>[사람 확인 필요]</h2>
+          <ul class="detail-list">
+            <li>Title: [사람 확인 필요]</li>
+            <li>Company: Samsung [사람 확인 필요]</li>
+            <li>Focus: Biomedical Signal Processing [사람 확인 필요]</li>
+          </ul>
+        </article>
+
+        <article class="panel" id="skills">
+          <p class="section-label">Skills</p>
+          <h2>Core areas</h2>
+          <ul class="chip-list">
+            <li>Biomedical signal processing</li>
+            <li>Product engineering</li>
+            <li>Algorithm design</li>
+            <li>Wearable devices</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="grid two-up">
+        <article class="panel">
+          <p class="section-label">Projects</p>
+          <h2>Featured work</h2>
+          <p class="muted">
+            Heart rate algorithm for Galaxy Watch Series [사람 확인 필요]
+          </p>
+        </article>
+
+        <article class="panel">
+          <p class="section-label">Timeline</p>
+          <h2>Experience snapshot</h2>
+          <p class="muted">
+            Working for Samsung for more than 10 years [사람 확인 필요]
+          </p>
+        </article>
+      </section>
+
+      <section class="panel games-panel" id="games">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Games</p>
+            <h2>Snake game reserved for the next loop</h2>
+          </div>
+          <p class="muted">Keyboard and touch controls will be added later.</p>
+        </div>
+
+        <div class="game-placeholder" aria-label="Reserved game area">
+          <div class="pixel-grid"></div>
+          <p>Games area prepared for the snake experience.</p>
+        </div>
+      </section>
+
+      <section class="panel contact-panel" id="contact">
+        <p class="section-label">Contact</p>
+        <h2>Ready for the verified CV details</h2>
+        <p class="muted">[사람 확인 필요] content remains visible until the profile is verified.</p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
