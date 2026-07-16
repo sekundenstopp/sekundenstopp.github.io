@@ -266,6 +266,7 @@
       if (this.gameState === 'playing') {
         return;
       }
+      this.toggleOverlay(false);
       if (this.gameState === 'gameover') {
         this.resetGame();
       }
@@ -308,6 +309,7 @@
     }
 
     restart() {
+      this.toggleOverlay(false);
       this.resetGame();
       this.start();
     }
@@ -520,6 +522,7 @@
         return;
       }
       this.overlay.hidden = !show;
+      this.overlay.setAttribute('aria-hidden', String(!show));
     }
 
     updateHud() {
