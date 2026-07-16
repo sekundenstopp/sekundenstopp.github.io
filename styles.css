@@ -178,6 +178,17 @@ main {
   padding: 30px;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(9, 16, 30, 0.82), rgba(9, 16, 30, 0.34)),
+    url("https://images.samsung.com/is/image/samsung/assets/us/watches/galaxy-watch-ultra/images/galaxy-watch-ultra-2025-kv-pc.jpg") center center / cover no-repeat;
+  opacity: 0.95;
+  filter: saturate(1.1) contrast(1.02);
+}
+
 .hero::after {
   content: "";
   position: absolute;
@@ -186,6 +197,11 @@ main {
   height: 320px;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.22), transparent 70%);
   filter: blur(10px);
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 .eyebrow,
@@ -204,7 +220,7 @@ p {
 }
 
 h1 {
-  max-width: 13ch;
+  max-width: 14ch;
   margin-bottom: 16px;
   font-size: clamp(2.4rem, 5.8vw, 4.7rem);
   line-height: 0.94;
@@ -221,6 +237,10 @@ h2 {
 .chip-list,
 .small-copy {
   color: var(--muted);
+}
+
+.contact-address {
+  max-width: 40ch;
 }
 
 .lead {
