@@ -1,14 +1,14 @@
 :root {
   color-scheme: dark;
-  --bg: #0f1511;
-  --bg-soft: #18221c;
-  --panel: rgba(19, 27, 21, 0.92);
-  --panel-strong: rgba(26, 37, 29, 0.98);
-  --panel-border: rgba(170, 201, 150, 0.18);
-  --text: #edf3e8;
-  --muted: #b6c3b0;
-  --accent: #88c35f;
-  --accent-strong: #c4e98a;
+  --bg: #d9eefc;
+  --bg-soft: #f3f9ff;
+  --panel: rgba(18, 29, 50, 0.88);
+  --panel-strong: rgba(13, 22, 39, 0.98);
+  --panel-border: rgba(213, 236, 255, 0.16);
+  --text: #f7fbff;
+  --muted: #c6d4e6;
+  --accent: #8ac7ff;
+  --accent-strong: #eef8ff;
   --danger: #ff8f8f;
   --shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
   --radius: 22px;
@@ -29,8 +29,7 @@ body {
   color: var(--text);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background:
-    radial-gradient(circle at top, rgba(132, 192, 91, 0.16), transparent 30%),
-    linear-gradient(180deg, #111813 0%, #0a0f0c 100%);
+    linear-gradient(180deg, #bfe4fb 0%, #88bbe4 38%, #f0f8ff 100%);
   overflow-x: hidden;
 }
 
@@ -44,20 +43,22 @@ body::after {
 
 body::before {
   background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-  background-size: 56px 56px;
-  opacity: 0.32;
-  animation: drift 18s linear infinite;
+    radial-gradient(circle, rgba(255, 255, 255, 0.96) 0 1.5px, transparent 1.8px) 0 0 / 40px 40px,
+    radial-gradient(circle, rgba(255, 255, 255, 0.82) 0 1.2px, transparent 1.5px) 18px 18px / 28px 28px,
+    radial-gradient(circle, rgba(255, 255, 255, 0.72) 0 1px, transparent 1.3px) 8px 6px / 18px 18px;
+  opacity: 0.55;
+  animation: snowfall 18s linear infinite;
 }
 
 body::after {
   background:
-    radial-gradient(circle at 15% 18%, rgba(92, 130, 59, 0.28), transparent 0 14%),
-    radial-gradient(circle at 78% 12%, rgba(167, 207, 114, 0.18), transparent 0 11%),
-    radial-gradient(circle at 72% 74%, rgba(61, 94, 40, 0.2), transparent 0 13%);
-  filter: blur(2px);
-  animation: clouds 40s ease-in-out infinite alternate;
+    radial-gradient(circle at 14% 18%, rgba(255, 255, 255, 0.9), transparent 0 12%),
+    radial-gradient(circle at 30% 16%, rgba(255, 255, 255, 0.6), transparent 0 8%),
+    radial-gradient(circle at 64% 12%, rgba(255, 255, 255, 0.76), transparent 0 13%),
+    radial-gradient(circle at 82% 20%, rgba(255, 255, 255, 0.7), transparent 0 10%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0));
+  filter: blur(10px);
+  animation: clouds 30s ease-in-out infinite alternate;
 }
 
 a {
@@ -157,7 +158,7 @@ main {
 .panel-inner {
   border: 1px solid var(--panel-border);
   border-radius: var(--radius);
-  background: linear-gradient(180deg, rgba(31, 43, 33, 0.96), rgba(17, 23, 19, 0.96));
+  background: linear-gradient(180deg, rgba(20, 32, 54, 0.94), rgba(13, 23, 40, 0.98));
   box-shadow: var(--shadow);
 }
 
@@ -183,7 +184,7 @@ main {
   inset: auto -8% -28% auto;
   width: 320px;
   height: 320px;
-  background: radial-gradient(circle, rgba(132, 192, 91, 0.2), transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.22), transparent 70%);
   filter: blur(10px);
 }
 
@@ -255,8 +256,8 @@ h2 {
 }
 
 .button.primary {
-  background: linear-gradient(135deg, var(--accent), #5d8243);
-  color: #0d130b;
+  background: linear-gradient(135deg, var(--accent), #4e9bdc);
+  color: #06111d;
 }
 
 .button.secondary {
@@ -301,7 +302,7 @@ h2 {
   padding: 10px 14px;
   border: 1px solid var(--panel-border);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .game-layout {
@@ -314,23 +315,23 @@ h2 {
   position: relative;
   padding: 14px;
   border-radius: 22px;
-  border: 1px solid rgba(180, 219, 125, 0.22);
+  border: 1px solid rgba(167, 213, 255, 0.2);
   background:
-    linear-gradient(180deg, rgba(112, 159, 81, 0.08), rgba(0, 0, 0, 0)),
-    linear-gradient(135deg, rgba(19, 26, 20, 0.95), rgba(12, 17, 13, 0.98));
+    linear-gradient(180deg, rgba(145, 201, 255, 0.08), rgba(255, 255, 255, 0)),
+    linear-gradient(135deg, rgba(14, 24, 43, 0.96), rgba(8, 15, 30, 0.99));
   overflow: hidden;
 }
 
 #game-canvas {
   display: block;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 2;
   height: auto;
   min-height: 0;
   border-radius: 16px;
   background:
-    linear-gradient(180deg, rgba(143, 197, 99, 0.06), transparent),
-    linear-gradient(135deg, rgba(25, 34, 26, 0.98), rgba(15, 20, 17, 0.98));
+    linear-gradient(180deg, rgba(163, 215, 255, 0.08), transparent),
+    linear-gradient(135deg, rgba(16, 24, 42, 0.98), rgba(9, 15, 28, 0.98));
 }
 
 .game-overlay {
@@ -340,7 +341,7 @@ h2 {
   place-items: center;
   gap: 10px;
   text-align: center;
-  background: rgba(5, 8, 6, 0.5);
+  background: rgba(3, 8, 20, 0.55);
   backdrop-filter: blur(4px);
   border-radius: 16px;
 }
@@ -393,7 +394,7 @@ h2 {
 .control-btn {
   min-height: 44px;
   padding: 0 16px;
-  border-color: rgba(180, 219, 125, 0.22);
+  border-color: rgba(167, 213, 255, 0.22);
   background: rgba(255, 255, 255, 0.04);
 }
 
@@ -411,7 +412,7 @@ h2 {
 .direction-btn {
   width: 70px;
   height: 54px;
-  border-color: rgba(180, 219, 125, 0.18);
+  border-color: rgba(167, 213, 255, 0.18);
   background: rgba(255, 255, 255, 0.05);
   font-size: 1.15rem;
   font-weight: 800;
@@ -425,6 +426,33 @@ h2 {
 .contact-panel {
   display: grid;
   gap: 8px;
+}
+
+.watch-panel {
+  display: grid;
+  gap: 12px;
+}
+
+.watch-card {
+  margin: 0;
+  padding: 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(167, 213, 255, 0.16);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.watch-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.watch-card figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.92rem;
 }
 
 .site-footer {
@@ -449,6 +477,15 @@ h2 {
 @keyframes drift {
   from { background-position: 0 0; }
   to { background-position: 112px 112px; }
+}
+
+@keyframes snowfall {
+  from {
+    transform: translate3d(0, -8%, 0);
+  }
+  to {
+    transform: translate3d(0, 8%, 0);
+  }
 }
 
 @keyframes clouds {

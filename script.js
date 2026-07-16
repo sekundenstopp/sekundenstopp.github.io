@@ -30,11 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const controlButtons = document.querySelectorAll('[data-action]');
   const directionButtons = document.querySelectorAll('[data-direction]');
 
-  if (!canvas || !window.SnakeGame) {
+  if (!canvas || !window.TetrisGame) {
     return;
   }
 
-  const game = new window.SnakeGame({
+  const game = new window.TetrisGame({
     canvas,
     overlay,
     scoreNode,
@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (action === 'start') game.start();
       if (action === 'pause') game.togglePause();
       if (action === 'restart') game.restart();
+      if (action === 'rotate') game.rotate();
     });
   });
 
